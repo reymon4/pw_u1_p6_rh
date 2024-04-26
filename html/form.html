@@ -1,0 +1,50 @@
+<!-- El símbolo "!" más el DOCTYPE, indican que la versión de HTML es 5 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student form | TEST</title>
+  </head>
+  <body>
+    <header>
+      <h1>Form</h1>
+    </header>
+    <!-- El navBar hay que verlo como si fuese una lista de elementos -->
+    <nav>
+      <!-- EL UL SIRVE PARA DECLARAR LISTAS -->
+      <!-- unorder list -->
+      <ul>
+        <li>Home</li>
+        <li>Homeworks</li>
+        <li>Personal information</li>
+        <li>Exam</li>
+      </ul>
+    </nav>
+    <section>
+      <table>
+        <!-- UNA FILA Y DOS COLUMNAS -->
+        <tr>
+          <td><label id="name" for="input_name">Name:</label></td>
+          <td><input id="input_name" type="text" /></td>
+        </tr>
+        <tr>
+          <td><label id="lastname" for="input_lastname">Lastname:</label></td>
+          <td><input id="input_lastname" type="text" /></td>
+        </tr>
+        <tr>
+          <td><label id="birthday" for="input_birthday">Birthday:</label></td>
+          <td>
+            <input id="input_birthday" type="date" />
+          </td>
+        </tr>
+        <tr>
+          <td><label id="email" for="input_email">Email:</label></td>
+          <td><input id="input_email" type="email" /></td>
+        </tr>
+      </table>
+      <button>Submit</button>
+    </section>
+    <footer>ALL RIGHTS RESERVED © - KING® 2024</footer>
+  </body>
+</html>
