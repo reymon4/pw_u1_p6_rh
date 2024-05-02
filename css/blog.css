@@ -1,0 +1,36 @@
+/* COMBINACIÓN DE SELECTORES */
+/* Combinación jerárquica -> Solo funciona cuando hay "padre e hijo" */
+/* Se puede decir que primero toma el "contenedor" y luego el "contenido" */
+.menu li {
+  list-style: none;
+  display: inline-block;
+  /*   margin:150px; */ /* Este aplica a todos los márgenes del elemento */
+  margin: 5px 50px; /* Primer valor es para arriba y abajo. Y, el segundo es para el lado izq y der */
+  /* Si queremos un valor distinto para cada margen del elemento, solo escribo los cuatro valores que se necesite para cada margen. Considerando el sentido horario, empezando desde arriba */
+  background-color: rgb(153, 150, 249);
+  color: white;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+li:hover {
+  background-color: rgb(104, 98, 254);
+}
+
+/* Combinación por selector -> Lo realizamos cuando varios selectores tienen las mismas declaraciones */
+.menu,
+li {
+}
+
+.menu {
+  background: rgb(212, 211, 249);
+  text-align: left;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(104, 98, 254);
+}
+h2{
+    font:bold 15px sans-serif;
+}
