@@ -7,30 +7,84 @@
   /*   margin:150px; */ /* Este aplica a todos los márgenes del elemento */
   margin: 5px 50px; /* Primer valor es para arriba y abajo. Y, el segundo es para el lado izq y der */
   /* Si queremos un valor distinto para cada margen del elemento, solo escribo los cuatro valores que se necesite para cada margen. Considerando el sentido horario, empezando desde arriba */
-  background-color: rgb(153, 150, 249);
+  background-color: #9996f9;
   color: white;
   cursor: pointer;
   padding: 5px 15px;
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 li:hover {
-  background-color: rgb(104, 98, 254);
+  background-color: #1008fb;
 }
 
 /* Combinación por selector -> Lo realizamos cuando varios selectores tienen las mismas declaraciones */
 .menu,
 li {
 }
-
 .menu {
-  background: rgb(212, 211, 249);
-  text-align: left;
+  background-color: #6862fe;
 }
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    color:  rgb(104, 98, 254);
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6862fe;
 }
-h2{
-    font:bold 15px sans-serif;
+h2 {
+  font: bold 15px sans-serif;
+}
+body {
+  text-align: center;
+  background-color:  #6862fe;
+  /* #5dd9c1 */
+}
+
+.agrupar {
+  background-color: #9996f9;
+  width: 900px;
+  margin: auto;
+  border: 2px solid black;
+}
+.cabecera {
+  background-color: white;
+  border-radius: 15px;
+  color: #1008fb;
+  padding: 0.001%;
+}
+.seccion {
+  width:600px;
+  margin: 10px;
+  float: left;
+}
+#articulo1, #articulo2{
+  background-color: white;
+  border: 1px solid #1008fb;
+  padding: 20px;
+  margin:15px;
+}
+
+article footer{
+  text-align: right;
+  border-color: white;
+
+}
+
+.referencias{
+  width: 200px;
+  background-color: #6862fe;
+  float: right;
+  margin: 15px 20px;
+border-radius: 15px;
+}
+.piePagina{
+  clear: both;
+}
+blockquote{
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 150px;
+}
+img{
+  margin: auto auto;
 }
