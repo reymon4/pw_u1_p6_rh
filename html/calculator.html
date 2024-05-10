@@ -6,6 +6,16 @@
     <title>Calculator | TEST</title>
     <script>
         function changeText(idElemento){
+          document.getElementById(idElemento).style.background="cyan";
+          document.getElementById(idElemento).style.fontSize="30px";
+        }
+        function add(number1, number2){
+          var result= number1+number2;
+          console.log(result)
+        }
+        function completeAdd(){
+          var result=parseInt(document.getElementById('num1').value)+parseInt(document.getElementById('num2').value);
+          console.log(result)
         }
     </script>
   </head>
@@ -15,12 +25,19 @@
     <section>
       <label id="labelNumber1" for="">Number 1:</label>
       <input type="number" id="num1" />
-      <label for="">Number 2:</label>
+      <label  id="labelNumber2" for="">Number 2:</label>
       <input type="number" id="num2" />
         <!-- EVENTOS PARA LA INTERACCIÓN -->
         <!-- JS en línea (Como atributo en el elemento) -->
       <button onclick="document.getElementById('labelNumber1').style.background='red'">Test Color</button>
       <button onclick="document.getElementById('labelNumber1').style.fontSize='100px'">Test Size</button>
+
+      <button onclick="changeText('labelNumber1')">Change Color</button>
+      <button onclick="changeText('labelNumber2')">Change Size</button>      
+
+
+      <button onclick="add(document.getElementById('num1').value, document.getElementById('num2').value)">ADD</button>
+      <button onclick="completeAdd()">Complete ADD</button>
     </section>
     <footer></footer>
   </body>
