@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* El contenido que se va a visualizar de p es de tipo "type" */
+p:before {
+  content: attr(type);
+  display: block;
+  margin: 3px 2px;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: blueviolet;
+}
+input {
+  width: 300px;
+  border: none;
+  border-bottom: 2px solid rgb(117, 18, 210);
+  background: none;
+}
+input:focus {
+  background-color: rgb(206, 179, 232);
+  outline: none;
+  border-radius: 5px;
+}
+h2 {
+    margin: 10px 2px ;
+    width: 200px;
+    color: rgb(112, 35, 185);
+    border-bottom: 3px solid rgb(112, 35, 185) ;
+}
+.form{
+
+}
+.personalInformation{
+    width: 350px;
+    height: 420px;
+    background-color: rgb(213, 199, 226);
+    border-radius: 10px;
+    padding:20px 35px;
+    box-shadow: 0 0 40px 5px blueviolet;
+}
+body{
+    background-color: rgb(174, 97, 247);
+}

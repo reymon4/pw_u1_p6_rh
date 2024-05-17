@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CALULADORA</title>
-    <link rel="stylesheet" href="../css/calculadora.css">
+    <link rel="stylesheet" href="../css/calculadora.css" />
+    <script src="../js/calculadora.js "></script>
   </head>
   <body>
     <header></header>
@@ -12,24 +13,26 @@
     <section>
       <div class="container">
         <div class="calculadora">
-          <div class="display"></div>
-          <button id="cButton" class="c-col2">C</button>
-          <button id="cDelete">&larr;</button>
-          <button id="cPor">%</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button id="cMult">X</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button id="cSuma">+</button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button id="cRes">-</button>
+          <div class="display">
+            <label id="idResultado2" for=""></label>
+          </div>
+          <button onclick="reset()" id="cButton" class="c-col2">C</button>
+          <button onclick=" deleteElement()" id="cDelete">&larr;</button>
+          <button onclick="getValue('/')" id="cPor">/</button>
+          <button type="number" onclick="getValue(this)">7</button>
+          <button type="number" onclick="getValue(this)">8</button>
+          <button type="number" onclick="getValue(this)">9</button>
+          <button onclick="getValue(this)" id="cMult">X</button>
+          <button type="number" onclick="getValue(this)">4</button>
+          <button type="number" onclick="getValue(this)">5</button>
+          <button type="number" onclick="getValue(this)">6</button>
+          <button onclick="getValue('+')" id="cSuma">+</button>
+          <button type="number" onclick="getValue(this)">1</button>
+          <button type="number" onclick="getValue(this)">2</button>
+          <button type="number" onclick="getValue(this)">3</button>
+          <button onclick="getValue('-')"id="cRes">-</button>
           <button class="c-col2">0</button>
-          <button>.</button>
+          <button type="number" onclick="getValue(this)">.</button>
           <button id="cIgual">=</button>
         </div>
       </div>

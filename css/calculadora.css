@@ -25,8 +25,6 @@
     text-align: right;
    border-radius: 20px;
    margin: 10px ;
-
-   border-color: red;
 }
 
 .c-col2{
@@ -49,6 +47,7 @@
 button:active{
     background-color: rgb(255, 214, 211);
 }
+/* Para poner color en toda la pantalla */
 *{
     background-color: coral;
 }
