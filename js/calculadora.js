@@ -1,69 +1,77 @@
-let num1 = null;
-let num2 = null;
 let operator = null;
+let result = null;
+let input = "";
 
-function getValue(button) {
-  if (num1 === null) {
-    num1 = parseInt(button.innerText.trim());
-    console.log(num1)
-    document.getElementById("idResultado2").innerText = num1;
-  } else if (operator === null) {
-    operator = parseInt(button.innerText.trim());
-    console.log(num2)
-    document.getElementById("idResultado2").innerText = operator;
-  
-} else if (num2 === null) {
-    num2 = parseInt(button.innerText.trim());
-    console.log(num2)
-    document.getElementById("idResultado2").innerText = num2;
+const getValue = (value) => {
+  const display = document.getElementById("result");
+  if (value === "C") {
+    reset();
+    return;
   }
-}
-
-const sumarCompleto = () => {
-  if (num1 !== null && num2 !== null) {
-    var resultado = num1 + num2;
-    console.log(resultado);
-    document.getElementById("idResultado2").innerText = resultado;
-  }
-};
-
-const restarCompleto = () => {
-
-  if (num1 !== null && num2 !== null) {
-    var resultado = num1 - num2;
-    console.log(resultado);
-    document.getElementById("idResultado2").innerText = resultado;
-  }
-};
-const multiplicarCompleto = () => {
-
-  if (num1 !== null && num2 !== null) {
-    var resultado = num1 * num2;
-    console.log(resultado);
-    document.getElementById("idResultado2").innerText = resultado;
-  }
-};
-const dividirCompleto = () => {
-  if (num1 !== null && num2 !== null) {
-    if (num2 != 0) {
-      var resultado = num1 / num2;
-    } else {
-      var resultado = "Syntax Error";
+  if (value === "=") {
+    if (input !== "" && operator !== "") {
+      result = calculate(result, parseFloat(input), operator); 
+      display.innerText = result;
+      input = result.toString();
+      console.log(input)
+      console.log(result)
+      operator = "";
     }
+    return;
+  }
 
-    console.log(resultado);
-    document.getElementById("idResultado2").innerText = resultado;
+  if (["+", "-", "X", "÷"].includes(value)) {
+    if (input !== "") {
+      if (result === null) {
+        result = parseFloat(input); 
+      } else {
+        result = calculate(result, parseFloat(input), operator); 
+      }
+      operator = value;
+      input = "";
+      display.innerText = result + " " + operator;
+    } else if (result !== null) {
+      operator = value;
+      display.innerText = result + " " + operator;
+    }
+    return;
+  }
+  input += value;
+  display.innerText += value;
+};
+
+function deleteElement() {
+  const display = document.getElementById("result");
+  if (input.length > 0) {
+    input = input.slice(0, -1);
+    display.innerText = display.innerText.slice(0, -1);
+  } else if (operator !== "") {
+    operator = "";
+    display.innerText = display.innerText.slice(0, -1);
+  } else if (result !== null) {
+    result = null;
+    display.innerText = "";
+  }
+}
+
+const reset = () => {
+  input = ""; 
+  operator = null;
+  result = null;
+  document.getElementById("result").innerText = "";
+};
+
+const calculate = (x, y, operator) => {
+  switch (operator) {
+    case "+":
+      return x + y;
+    case "-":
+      return x - y;
+    case "X":
+      return x * y;
+    case "÷":
+      return x / y;
+    default:
+      return 0;
   }
 };
-const reset = () => {
-  num1 = null;
-  num2 = null;
-  document.getElementById("idResultado2").innerText = "";
-
-};
-function deleteElement(){
-    display.textContent = display.textContent.slice(0, -1);
-};
-function equal(){
-
-}

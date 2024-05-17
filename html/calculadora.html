@@ -14,26 +14,26 @@
       <div class="container">
         <div class="calculadora">
           <div class="display">
-            <label id="idResultado2" for=""></label>
+            <label id="result" for=""></label>
           </div>
-          <button onclick="reset()" id="cButton" class="c-col2">C</button>
+          <button onclick="getValue('C')" id="cButton" class="c-col2">C</button>
           <button onclick=" deleteElement()" id="cDelete">&larr;</button>
           <button onclick="getValue('/')" id="cPor">/</button>
-          <button type="number" onclick="getValue(this)">7</button>
-          <button type="number" onclick="getValue(this)">8</button>
-          <button type="number" onclick="getValue(this)">9</button>
-          <button onclick="getValue(this)" id="cMult">X</button>
-          <button type="number" onclick="getValue(this)">4</button>
-          <button type="number" onclick="getValue(this)">5</button>
-          <button type="number" onclick="getValue(this)">6</button>
+          <button type="number" onclick="getValue('7')">7</button>
+          <button type="number" onclick="getValue('8')">8</button>
+          <button type="number" onclick="getValue('9')">9</button>
+          <button onclick="getValue('x')" id="cMult">X</button>
+          <button type="number" onclick="getValue('4')">4</button>
+          <button type="number" onclick="getValue('5')">5</button>
+          <button type="number" onclick="getValue('6')">6</button>
           <button onclick="getValue('+')" id="cSuma">+</button>
-          <button type="number" onclick="getValue(this)">1</button>
-          <button type="number" onclick="getValue(this)">2</button>
-          <button type="number" onclick="getValue(this)">3</button>
+          <button type="number" onclick="getValue('1')">1</button>
+          <button type="number" onclick="getValue('2')">2</button>
+          <button type="number" onclick="getValue('3')">3</button>
           <button onclick="getValue('-')"id="cRes">-</button>
           <button class="c-col2">0</button>
-          <button type="number" onclick="getValue(this)">.</button>
-          <button id="cIgual">=</button>
+          <button type="number" onclick="getValue('.')">.</button>
+          <button onclick= "calculate()" id="cIgual">=</button>
         </div>
       </div>
     </section>
