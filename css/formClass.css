@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formulario {
+
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 100px 100px 100px 100px;
+    padding: 15px;
+    background-color: aqua;
+
+}
+
+body {
+
+    background-color: rgb(111, 106, 106);
+}
+
+p:before {
+    /* selector tipo pseudo clase*/
+    content: attr(type);
+    /*muestra el contenido del atributo del elemento P*/
+    display: block;
+    /*decimos que le p ocupe un bloque completo*/
+    margin: 3px 2px;
+    font-size: 15;
+    color: #1B7F79;
+
+
+
+}
+
+.col-3 {
+
+    grid-column: span 3;
+
+}
+
+.col-2 {
+
+    grid-column: span 2;
+
+}
+
+input {
+    width: 300px;
+
+    border-bottom: 2px solid #1B7F79;
+    background: none;
+    margin: 10px 5px;
+
+
+
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #1B7F79;
+}
